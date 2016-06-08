@@ -1,0 +1,21 @@
+<button id="editStyleRelations" class="btn btnSmall btnSuccess">Accept</button>
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th>Gender</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%coll.forEach(function(styleItem, i){%>
+    <tr class="styleItemRow" id="<%=styleItem.objectId%>">
+        <td class="align-center checkItem"><input id="checkRetail-<%= i%>" type="checkbox" <%= (current.indexOf(styleItem.objectId) !== -1) ? 'checked' : ''%>><label for="checkRetail-<%= i%>"></label></td>
+        <td><%=styleItem.gender || ''%></td>
+        <td><%=styleItem.styleTitle || ''%></td>
+        <td><%=styleItem.styleDescription || ''%></td>
+    </tr>
+    <%})%>
+    </tbody>
+</table>

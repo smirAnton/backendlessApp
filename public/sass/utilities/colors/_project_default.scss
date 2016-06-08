@@ -1,0 +1,49 @@
+$colors-default: (
+    'red'    : #fd5143,
+    'green'  : #4fbb59,
+    'blue'   : #489bd6,
+    'orange' : #ff9948,
+    'gray'   : #cbdbe6
+);
+
+// Default --------------
+$black   : #000000 !default;
+$white   : #ffffff !default;
+$white-1 : #f1f1f1;
+// -----------------------
+
+// Grey -----------------
+$gray-1   : #acacac !default;
+$gray-2   : #4f5054;
+$gray-3   : #6c6b6b;
+$gray-4   : #868686;
+$gray-5   : #cccccc;
+$gray-6   : #f8f8f8;
+$gray-7   : #f5f9fa;
+
+// -----------------------
+
+// Blue ------------------
+$blue-1   : #afd5f0 !default;
+$blue-2   : #92c7e1;
+$blue-3   : #36aee9;
+// -----------------------
+
+
+// Red default
+$colorRed     :   map-get($colors-default, 'red');
+
+// Green default
+$colorGreen   :   map-get($colors-default, 'green');
+
+// Blue default
+$colorBlue    :   map-get($colors-default, 'blue');
+
+// Orange default
+$colorOrange  :   map-get($colors-default, 'orange');
+
+// Gray default
+$colorGray    :   map-get($colors-default, 'gray');
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)

@@ -1,0 +1,94 @@
+// Buttons style
+
+.btn {
+  @include transition(background-color .2s ease-in-out);
+  @include no-select;
+  background-color: $white;
+  font-family: $semiBoldFontFamily;
+  color: $white;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: nowrap;
+  outline: 0;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+
+  &Large {
+    width: auto;
+    padding: 0 15px;
+    height: 40px;
+    @include rem(font-size, 14px);
+    @include rem(line-height, 38px);
+  }
+
+  &Medium {
+    width: auto;
+    padding: 0 10px;
+    height: 40px;
+    @include rem(font-size, 12px);
+    @include rem(line-height, 38px);
+  }
+
+  &Small {
+    width: auto;
+    padding: 0 10px;
+    height: 30px;
+    @include rem(font-size, 12px);
+    @include rem(line-height, 28px);
+  }
+
+  &Blue {
+    border-color: $btnBlueColor;
+    color: $btnBlueColor;
+
+    &:hover {
+      background-color: $btnBlueColor;
+
+      a{
+        color: $white;
+      }
+    }
+    a{
+      color: $btnBlueColor;
+      text-decoration: none;
+    }
+  }
+
+  &Error {
+    border-color: $btnRedColor;
+    color: $btnRedColor;
+
+    &:hover {
+      background-color: $btnRedColor;
+    }
+  }
+
+  &Success {
+    border-color: $btnGreenColor;
+    color: $btnGreenColor;
+
+    &:hover {
+      background-color: $btnGreenColor;
+    }
+  }
+
+  &Disable {
+    border-color: $btnGrayColor;
+    color: $btnGrayColor;
+
+    &:hover {
+      background-color: $btnGrayColor;
+    }
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+#createBtn{
+  margin-bottom: 15px;
+}

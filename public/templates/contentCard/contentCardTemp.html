@@ -1,0 +1,21 @@
+<button id="editCardRelations" class="btn btnSmall btnSuccess">Accept</button>
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th>Gender</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%coll.forEach(function(cardItem, i){%>
+    <tr class="cardItemRow" id="<%=cardItem.objectId%>">
+        <td class="align-center checkItem"><input id="checkRetail-<%= i%>" type="checkbox" <%= (current.indexOf(cardItem.objectId) !== -1) ? 'checked' : ''%>><label for="checkRetail-<%= i%>"></label></td>
+        <td><%=cardItem.gender || ''%></td>
+        <td><%=cardItem.offerTitle || ''%></td>
+        <td><%=cardItem.offerDescription || ''%></td>
+    </tr>
+    <%})%>
+    </tbody>
+</table>
